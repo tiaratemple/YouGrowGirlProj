@@ -20,7 +20,7 @@ rollbar.log('Hello world!')
 
 
 
-const { getHTML, getCSS, getJS, getPlantFact } = require('./controller')
+const { getHTML, getCSS, getJS, getPlantFact, getRollbar} = require('./controller')
 
 app.get('/' , getHTML)
 app.get('/css' , getCSS)
