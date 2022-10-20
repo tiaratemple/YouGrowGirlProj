@@ -19,11 +19,14 @@ var rollbar = new Rollbar({
 rollbar.log('Hello world!')
 
 
-const { getHTML, getCSS, getJS } = require('./controller')
+
+const { getHTML, getCSS, getJS, getPlantFact } = require('./controller')
 
 app.get('/' , getHTML)
 app.get('/css' , getCSS)
 app.get('/js', getJS )
+app.get('/' , getPlantFact)
+app.get('rollbar', getRollbar)
 
 const port = process.env.PORT || 4000
 
