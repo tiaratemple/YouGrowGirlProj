@@ -1,4 +1,47 @@
 p {
    color:  #7B886B;
-   font-size: 5em;
+   font-size: 1em;
+}
+
+h1 {
+   display: block;
+   position: relative;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   background-color: #e3d5ca;
+   font-family:sans-serif;
+   color: #52796f;
+   font-size: 4em;
+
+}
+
+#navigation {
+   display: inline-block;
+   left: 285px;
+
+}
+
+.nav-links {
+   position: relative;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   display: inline-block;
+
+}
+
+.nav-links li a {
+   display: inline-block;
+   line-height: 1.4;
+}
+
+.nav-links a {
+   position: relative;
+   font-size: 18px;
+   font-family: sans-serif;
+   font-weight: 500;
+   font-style: normal;
+   color:#7B886B;
+   display: inline-block;
 }
