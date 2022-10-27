@@ -1,0 +1,112 @@
+ [
+    {
+        "id": 1,
+        "name": "Aloe Vera",
+        "img": "https://cdn.shopify.com/s/files/1/0059/8835/2052/products/aloe-plant_450_650x.jpg?v=1599029343",
+        "careTips": [
+            {"water": "Water every 2-3 weeks in the Spring/Summer and every 4-6 weeks in the Winter."},
+            {"sunlight": "Bright indirect sunlight. A western or southern window is ideal."},
+            {"difficulty": "Easy"}
+        ],
+        "Like": 0
+    },
+    {
+        "id": 2,
+        "name": "Snake Plant",
+        "img": "https://post.healthline.com/wp-content/uploads/2022/01/snake-plant-detail-732x549-thumbnail-732x549.jpg",
+        "careTips": [
+            {"water": "Water no more than every two weeks. Only water if the soil feels dry."},
+            {"sunlight": "Moderate-low indirect and steady light."},
+            {"difficulty": "Easy"}
+        ],
+        "Like": 0
+    },
+    {
+        "id": 3,
+        "name": "Peace Lily",
+        "img": "https://cdn.shopify.com/s/files/1/0417/7140/1380/articles/How-to-Care-for-Your-Peace-Lily_750x.jpg?v=1596152308",
+        "careTips": [
+            {"water": "Water when top inch of soil is dry."},
+            {"sunlight": "Low indirect light."},
+            {"difficulty": "Easy"}
+        ],
+        "Like": 0
+    },
+    {
+        "id": 4,
+        "name": "Majesty Palm",
+        "img": "https://www.gertens.com/media/catalog/product/cache/2f7118fbe7bd22be61cf8b73d4db9058/m/a/majesty-palm-10in_2.jpg",
+        "careTips": [
+            {"water": "Water every 1-2 weeks."},
+            {"sunlight": "Bright indirect sunlight."},
+            {"difficulty": "Moderate"}
+        ],
+        "Like": 0
+    },
+    {
+        "id": 5,
+        "name": "Air Plants",
+        "img": "https://njaes.rutgers.edu/plant-of-the-month/images/Tillandsia-harrisii-1.jpg",
+        "careTips": [
+            {"water": "Soak air plants in a bowl of water for 20 minutes- 1 hour every 7-10 days."},
+            {"sunlight": "Bright filtered light."},
+            {"difficulty": "Easy"}
+        ],
+        "Like": 0
+    },
+    {
+        "id": 6,
+        "name": "Orchid",
+        "img": "https://cdn.shopify.com/s/files/1/0106/1168/7482/files/31113845_10155760162433752_1561797675311955968_o_800x.jpg?v=1613736090",
+        "careTips": [
+            {"water": "Water once a week."},
+            {"sunlight": "Moderate indirect sunlight."},
+            {"difficulty": "Easy"}
+        ],
+        "Like": 0
+    },
+    {
+        "id": 7,
+        "name": "Lucky Bamboo",
+        "img": "https://static.onecms.io/wp-content/uploads/sites/34/2022/05/02/lucky-bamboo-0522.jpg",
+        "careTips": [
+            {"water": "Water every 7-10 days."},
+            {"sunlight": "Light shade and indirect sunlight."},
+            {"difficulty": "Easy"}
+        ],
+        "Like": 0
+    },
+    {
+        "id": 8,
+        "name": "Pothos",
+        "img": "https://cdn.shopify.com/s/files/1/0212/1030/0480/products/MarbleQueenPothos.jpg?v=1637010519",
+        "careTips": [
+            {"water": "Water every 1-2 weeks."},
+            {"sunlight": "Bright indirect sunlight. A southern window is ideal."},
+            {"difficulty": "Easy"}
+        ],
+        "Like": 0
+    },
+    {
+        "id": 9,
+        "name": "Succulents",
+        "img": "https://www.plantthefuture.com/wp-content/uploads/2018/05/collaborations-footer.jpg",
+        "careTips": [
+            {"water": "Water every other week when temperatures are above 40 degrees. In winter, water once a month."},
+            {"sunlight": "Bright direct sun for 6 hours per day."},
+            {"difficulty": "Easy"}
+        ],
+        "Like": 0
+    },
+    {
+        "id": 10,
+        "name": "Monstera",
+        "img": "https://cdn.shopify.com/s/files/1/0212/1030/0480/products/monstera-deliciosa.jpg?v=1610543610",
+        "careTips": [
+            {"water": "Water every 1-2 weeks."},
+            {"sunlight": "Bright indirect sunlight."},
+            {"difficulty": "Easy"}
+        ],
+        "Like": 0
+    }
+]

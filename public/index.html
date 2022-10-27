@@ -4,47 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>You Grow Girl</title>
 </head>
 <body>
-    <h1>You Grow Girl</h1>
-    
-        <div id="navigation">
-            <ul class="nav-links">
-                <li class="nav-item">
-                    <a href="Search">
-                        Search
-                    </a>
-                </li> 
-                <li class="nav-item">
-                    <a href="Chart">
-                        Complexity Chart
-                    </a>
-                </li> 
-                <li class="nav-item">
-                    <a href="Facts">
-                        Random Plant Facts
-                    </a>
-                </li> 
-                <li class="nav-item">
-                    <a href="Favorites">
-                        Favorites
-                    </a>
-                </li> 
-            </ul>
-        </div>
-        </div>
+    <header>You Grow Girl</header>
+    <div class="topnav">
+    <main>
+        <form class="form" id="form">
+            <input type="text" name="search-bar" class="input-styles" id="input"></input>
+            <button type="submit">Search</button>
+        </form>
+        <a href="#complexity chart">Complexity Chart</a>
     </div>
+        
+  
     
+            <button id="plantButton">Get a Plant Fact</button>
+
+        <section id="plants-container">
+
+        </section>
     
-    <p>Thanks for POPPYing in</p>
-    <img src="./images/AloeVeraPhoto1.webp" alt="dewy aloe vera plant outside">
-    
-    <button id="plantButton">Get a Plant Fact</button>
-    
-    
+        </main>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="/js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
