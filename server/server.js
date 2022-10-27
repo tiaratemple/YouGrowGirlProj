@@ -20,14 +20,14 @@ app.use(cors())
 
 
 
-const { getPlants, likePlants, getPlantFact} = require('./controller')
+const { getPlants, updateLikes, getPlantFact} = require('./controller')
 
 
 //app.get('/' , getHTML)
 //app.get('/css' , getCSS)
 //app.get('/js', getJS )
 app.get('/api/plants', getPlants)
-app.put('/api/plants/:id', likePlants)
+app.put('/api/plants/:id', updateLikes)
 app.get('/api/plantFacts', getPlantFact)
 //app.get('rollbar', getRollbar)
 

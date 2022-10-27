@@ -1,24 +1,25 @@
-const plantsContainer = document.getElementById('plants-container')
+const plantsContainer = document.getElementById('plants-container');
 const form = document.getElementById('form');
-const plantBtn = document.getElementById("plantButton")
+const plantBtn = document.getElementById("plantButton");
 
-const baseURL = `http://localhost:4000/api/plants`
+const baseURL = `http://localhost:4000/api/plants`;
 
-const plantsCallback = ({ data: plants }) => createPlantCard(plants)
-const errCallback = err => console.log(err.response.data)
+const plantsCallback = ({ data: plants }) => createPlantCard(plants);
+const updateLikesCallback = ({ data: plant }) => updateLikeValue(plant);
+const errCallback = err => console.log(err.response.data);
 let inputField;
 
 const getPlants = () => {
     axios.get(baseURL)
     .then(plantsCallback)
     .catch(errCallback)
-}
+};
 
 const updateLikes = (id) => {
     axios.put(`${baseURL}/${id}`)
-    then(plantsCallback)
+    .then(updateLikesCallback)
     .catch(errCallback)
-}
+};
 
 const getPlantFact = () => {
     axios.get("http://localhost:4000/api/plantFacts/")
@@ -26,20 +27,21 @@ const getPlantFact = () => {
             const data = res.data;
             alert(data);
         });
-}
+};
 
-function submitHandler(e) {
+const submitHandler =(e) => {
     e.preventDefault();
     inputField = document.getElementById('input')
     getPlants();
-}
+};
 
-function createPlantCard(plants) {
+const createPlantCard = (plants) => {
     const plant = plants.find((plant) => {
         if (inputField.value === plant.name) {
             return plant
         }
     });
+
 
     const plantCard = document.createElement('div');
 
@@ -55,13 +57,17 @@ function createPlantCard(plants) {
                 <li>${plant.careTips[2].difficulty}</li>
             </ul>
         </div>
-            ${plant.Like}
+            <span id='upvote'>${plant.Like}</span>
         <button onClick="updateLikes(${plant.id})">
             Upvote
         </button>
     `
     plantsContainer.appendChild(plantCard)
 };
+
+const updateLikeValue = (plant) => {
+    document.getElementById('upvote').innerHTML = `${plant.Like}`
+}
 
 plantBtn.addEventListener('click', getPlantFact);
 form.addEventListener('submit', submitHandler);

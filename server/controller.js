@@ -9,9 +9,8 @@ module.exports = {
         res.status(200).send(plants)
     },
 
-    likePlants: (req, res) => {
+    updateLikes: (req, res) => {
         const { id } = req.params
-        console.log('id', typeof(id))
         let result = plants.find((plant) => {
             return plant.id === parseInt(id)
         })
