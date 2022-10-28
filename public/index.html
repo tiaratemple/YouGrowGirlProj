@@ -8,27 +8,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>You Grow Girl</title>
 </head>
 <body>
-    <header>You Grow Girl</header>
-    <div class="topnav">
+    <header>
+        <h1>
+            You Grow Girl
+        </h1>
+    </header>
     <main>
-        <form class="form" id="form">
-            <input type="text" name="search-bar" class="input-styles" id="input"></input>
-            <button type="submit">Search</button>
-        </form>
-        <a href="#complexity chart">Complexity Chart</a>
-    </div>
-        
-  
-    
+        <div class="topnav">
             <button id="plantButton">Get a Plant Fact</button>
-
-        <section id="plants-container">
+            <button id="chartButton">Complexity Chart</button>
+            <form class="form" id="form">
+                <input type="text" name="search-bar" class="input-styles" id="input"></input>
+                <button class="submit">Search</button>
+            </form>
+        </div>    
+        <section id="plants-container" class="plants-container">
         </section>
-    
-        </main>
+    </main>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
 </body>
