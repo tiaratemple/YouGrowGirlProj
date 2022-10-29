@@ -31,7 +31,7 @@ header {
 
 
 body {
-   background-color: #e3d5ca;
+   background: #E3D5CA url(https://i.etsystatic.com/28718911/r/il/4dea21/2997634814/il_794xN.2997634814_8v9h.jpg) center top/cover no-repeat padding-box fixed;
 }
 
 
@@ -65,6 +65,9 @@ li {
    display: flex;
    align-items:baseline;
    padding-bottom: 10px;
+   text-indent: 14px;
+   line-height: 2;
+   background-color: #7B886B;
 }
 
 .row {
@@ -106,3 +109,5 @@ li {
 .img-styles {
    width: 80%;
 }
+
+background: #E3D5CA url(https://i.etsystatic.com/28718911/r/il/4dea21/2997634814/il_794xN.2997634814_8v9h.jpg) center center/cover no-repeat padding-box;
