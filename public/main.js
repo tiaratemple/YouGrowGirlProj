@@ -5,6 +5,7 @@ const plantBtn = document.getElementById("plantButton");
 let inputField;
 let plantCard;
 let plantFactCard;
+let commentInputField;
 
 const baseURL = `http://localhost:4000/api/plants`;
 
@@ -165,9 +166,11 @@ const closeFactCard = () => {
   }
 };
 
+
 const addComment = (e) => {
   e.preventDefault();
-  console.log('comment posted')
+  commentInputField = document.getElementById("comment-input");
+  console.log('comment posted', commentInputField.value)
   // axios.post(`${baseURL}`, body)
   // .then(plantsCallback)
   // .catch(errCallback)
