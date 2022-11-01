@@ -9,7 +9,7 @@
             {"difficulty": "Easy"}
         ],
         "Like": 0,
-        "comment": []
+        "comments": []
     },
     {
         "id": 2,
@@ -21,7 +21,7 @@
             {"difficulty": "Easy"}
         ],
         "Like": 0,
-        "comment": []
+        "comments": []
     },
     {
         "id": 3,
@@ -33,7 +33,7 @@
             {"difficulty": "Easy"}
         ],
         "Like": 0,
-        "comment": []
+        "comments": []
     },
     {
         "id": 4,
@@ -45,7 +45,7 @@
             {"difficulty": "Moderate"}
         ],
         "Like": 0,
-        "comment": []
+        "comments": []
     },
     {
         "id": 5,
@@ -57,7 +57,7 @@
             {"difficulty": "Easy"}
         ],
         "Like": 0,
-        "comment": []
+        "comments": []
     },
     {
         "id": 6,
@@ -69,7 +69,7 @@
             {"difficulty": "Easy"}
         ],
         "Like": 0,
-        "comment": []
+        "comments": []
     },
     {
         "id": 7,
@@ -81,7 +81,7 @@
             {"difficulty": "Easy"}
         ],
         "Like": 0,
-        "comment": []
+        "comments": []
     },
     {
         "id": 8,
@@ -93,7 +93,7 @@
             {"difficulty": "Easy"}
         ],
         "Like": 0,
-        "comment": []
+        "comments": []
     },
     {
         "id": 9,
@@ -105,7 +105,7 @@
             {"difficulty": "Easy"}
         ],
         "Like": 0,
-        "comment": []
+        "comments": []
     },
     {
         "id": 10,
@@ -117,6 +117,6 @@
             {"difficulty": "Easy"}
         ],
         "Like": 0,
-        "comment": []
+        "comments": []
     }
 ]

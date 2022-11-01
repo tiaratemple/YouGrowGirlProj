@@ -3,7 +3,7 @@ header {
    display: block;
    position: relative;
    width: 100%;
-   height: 100%;
+   height: 100px;
    text-align: center;
    background-color: #52796f;
    font-family: 'Quicksand';
@@ -11,18 +11,22 @@ header {
    font-size: 2em;
 }
 
+header h1 {
+   margin: 0;
+}
+
 .topnav {
    list-style-type: none;
     background-color: #b5a886;
     display: flex;
-    justify-content: left;
+    justify-content: space-evenly;
     flex-direction: row-reverse;
 }
 
 
 .submit:hover, #plantButton:hover, #chartButton:hover {
-   background-color: #ddd;
-   color: black;
+   text-decoration: underline;
+   text-decoration-color: white;
 }
 
 
@@ -36,9 +40,9 @@ body {
   font-size: 16px;
   font-weight: 200;
   letter-spacing: 1px;
-  padding: 13px 20px 13px;
+  padding: 15px 0;
   outline: 0;
-  border: 1px solid black;
+  border: none;
   cursor: pointer;
   position: relative;
   background-color: rgba(0, 0, 0, 0);

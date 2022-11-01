@@ -56,6 +56,13 @@ const createPlantCard = (plants) => {
 
   currentPlantId = plant.id;
 
+  const html = 
+    '<ul>' + 
+      plant.comments.map((comment) => {
+        return `<li>${comment}</li>`
+      }).join('') + 
+    '</ul>';
+
   plantCard = document.createElement("div");
 
   plantCard.classList.add("plant-card");
@@ -102,7 +109,9 @@ const createPlantCard = (plants) => {
               Add Comment
             </button>
           </form>
-          <p>${plant.comment[0]}</p>
+          <div>
+            ${html}
+          </div>
         </div>
       </div>
       <ul>

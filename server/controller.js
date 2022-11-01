@@ -31,7 +31,7 @@ module.exports = {
         let plantToAddComment = plants.find((plant) => {
             return plant.id === parseInt(id)
         })
-        plantToAddComment.comment.push(comment)
+        plantToAddComment.comments.push(comment)
         res.status(200).send(plants)
     }
 
