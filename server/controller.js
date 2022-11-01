@@ -32,7 +32,7 @@ module.exports = {
             return plant.id === parseInt(id)
         })
         plantToAddComment.comment.push(comment)
-        res.status(200).send(plantToAddComment)
+        res.status(200).send(plants)
     }
 
     

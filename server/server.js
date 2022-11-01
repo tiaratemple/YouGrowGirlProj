@@ -7,7 +7,7 @@ app.use(express.json())
 app.use(cors())
 //app.use(express.static('public'))
 
-const { getPlants, updateLikes, getPlantFact, addComment} = require('./controller')
+const { getPlants, updateLikes, getPlantFact, addComment } = require('./controller')
 
 
 //app.get('/' , getHTML)

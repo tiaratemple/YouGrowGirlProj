@@ -6,7 +6,7 @@ let inputField;
 let plantCard;
 let plantFactCard;
 let commentInputField;
-
+let currentPlantId;
 const baseURL = `http://localhost:4000/api/plants`;
 
 const plantsCallback = ({ data: plants }) => createPlantCard(plants);
@@ -45,11 +45,16 @@ const submitHandler = (e) => {
 };
 
 const createPlantCard = (plants) => {
+  if (plantCard) {
+    plantCard.remove()
+  }
   const plant = plants.find((plant) => {
     if (inputField.value === plant.name){
       return plant;
     }
   });
+
+  currentPlantId = plant.id;
 
   plantCard = document.createElement("div");
 
@@ -97,8 +102,7 @@ const createPlantCard = (plants) => {
               Add Comment
             </button>
           </form>
-          <ul id="unordered">
-          </ul>
+          <p>${plant.comment[0]}</p>
         </div>
       </div>
       <ul>
@@ -170,10 +174,13 @@ const closeFactCard = () => {
 const addComment = (e) => {
   e.preventDefault();
   commentInputField = document.getElementById("comment-input");
-  console.log('comment posted', commentInputField.value)
-  // axios.post(`${baseURL}`, body)
-  // .then(plantsCallback)
-  // .catch(errCallback)
+  const body = {
+    id: currentPlantId,
+    comment: commentInputField.value
+  }
+  axios.post(`${baseURL}/addComment/:id`, body)
+  .then(plantsCallback)
+  .catch(errCallback)
 };
 
 
