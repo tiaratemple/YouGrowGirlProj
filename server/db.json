@@ -8,7 +8,8 @@
             {"sunlight": "Bright indirect sunlight. A western or southern window is ideal."},
             {"difficulty": "Easy"}
         ],
-        "Like": 0
+        "Like": 0,
+        "comment": []
     },
     {
         "id": 2,
@@ -19,7 +20,8 @@
             {"sunlight": "Moderate-low indirect and steady light."},
             {"difficulty": "Easy"}
         ],
-        "Like": 0
+        "Like": 0,
+        "comment": []
     },
     {
         "id": 3,
@@ -30,7 +32,8 @@
             {"sunlight": "Low indirect light."},
             {"difficulty": "Easy"}
         ],
-        "Like": 0
+        "Like": 0,
+        "comment": []
     },
     {
         "id": 4,
@@ -41,7 +44,8 @@
             {"sunlight": "Bright indirect sunlight."},
             {"difficulty": "Moderate"}
         ],
-        "Like": 0
+        "Like": 0,
+        "comment": []
     },
     {
         "id": 5,
@@ -52,7 +56,8 @@
             {"sunlight": "Bright filtered light."},
             {"difficulty": "Easy"}
         ],
-        "Like": 0
+        "Like": 0,
+        "comment": []
     },
     {
         "id": 6,
@@ -63,7 +68,8 @@
             {"sunlight": "Moderate indirect sunlight."},
             {"difficulty": "Easy"}
         ],
-        "Like": 0
+        "Like": 0,
+        "comment": []
     },
     {
         "id": 7,
@@ -74,7 +80,8 @@
             {"sunlight": "Light shade and indirect sunlight."},
             {"difficulty": "Easy"}
         ],
-        "Like": 0
+        "Like": 0,
+        "comment": []
     },
     {
         "id": 8,
@@ -85,7 +92,8 @@
             {"sunlight": "Bright indirect sunlight. A southern window is ideal."},
             {"difficulty": "Easy"}
         ],
-        "Like": 0
+        "Like": 0,
+        "comment": []
     },
     {
         "id": 9,
@@ -96,7 +104,8 @@
             {"sunlight": "Bright direct sun for 6 hours per day."},
             {"difficulty": "Easy"}
         ],
-        "Like": 0
+        "Like": 0,
+        "comment": []
     },
     {
         "id": 10,
@@ -107,6 +116,7 @@
             {"sunlight": "Bright indirect sunlight."},
             {"difficulty": "Easy"}
         ],
-        "Like": 0
+        "Like": 0,
+        "comment": []
     }
 ]

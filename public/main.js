@@ -1,26 +1,39 @@
 const plantsContainer = document.getElementById("plants-container");
+const plantFactContainer = document.getElementById("plant-fact-container");
 const form = document.getElementById("form");
 const plantBtn = document.getElementById("plantButton");
+let inputField;
+let plantCard;
+let plantFactCard;
 
 const baseURL = `http://localhost:4000/api/plants`;
 
 const plantsCallback = ({ data: plants }) => createPlantCard(plants);
 const updateLikesCallback = ({ data: plant }) => updateLikeValue(plant);
 const errCallback = (err) => console.log(err.response.data);
-let inputField;
 
 const getPlants = () => {
-  axios.get(baseURL).then(plantsCallback).catch(errCallback);
+  if (plantCard) {
+    plantCard.remove()
+  }
+  axios.get(baseURL)
+  .then(plantsCallback)
+  .catch(errCallback);
 };
 
 const updateLikes = (id) => {
-  axios.put(`${baseURL}/${id}`).then(updateLikesCallback).catch(errCallback);
+  axios.put(`${baseURL}/${id}`)
+  .then(updateLikesCallback)
+  .catch(errCallback);
 };
 
 const getPlantFact = () => {
+  if (plantFactCard) {
+    plantFactCard.remove()
+  }
   axios.get("http://localhost:4000/api/plantFacts/").then((res) => {
     const data = res.data;
-    alert(data);
+    createPlantFactCard(data)
   });
 };
 
@@ -32,12 +45,12 @@ const submitHandler = (e) => {
 
 const createPlantCard = (plants) => {
   const plant = plants.find((plant) => {
-    if (inputField.value === plant.name) {
+    if (inputField.value === plant.name){
       return plant;
     }
   });
 
-  const plantCard = document.createElement("div");
+  plantCard = document.createElement("div");
 
   plantCard.classList.add("plant-card");
 
@@ -69,6 +82,23 @@ const createPlantCard = (plants) => {
             </span>
           </button>
         </div>
+        <div>
+          <form class="form" id="comment-form">
+            <input 
+              type="text" 
+              name="comment" 
+              class="comment-input-styles" 
+              id="comment-input"
+              placeholder="Enter a comment"
+            >
+            </input>
+            <button class="comment-btn-styles">
+              Add Comment
+            </button>
+          </form>
+          <ul id="unordered">
+          </ul>
+        </div>
       </div>
       <ul>
         <li>
@@ -95,11 +125,55 @@ const createPlantCard = (plants) => {
     </div>
   `;
   plantsContainer.appendChild(plantCard);
+  const commentForm = document.getElementById("comment-form");
+  commentForm.addEventListener("submit", addComment);
 };
 
 const updateLikeValue = (plant) => {
   document.getElementById("upvote").innerHTML = `${plant.Like}`;
 };
+
+const createPlantFactCard = (plantFact) => {
+  plantFactCard = document.createElement("div");
+
+  plantFactCard.classList.add("plant-fact-card");
+
+  plantFactCard.innerHTML = `
+    <div class="plant-fact-content">
+      <div class="plant-fact-top">
+        <button class="close-styles" id="close-btn">
+          <i 
+            style="font-size:24px" 
+            class="fa">&#xf00d;
+          </i>
+        </button>
+      </div>
+      <p>
+        ${plantFact}
+      </p>
+    </div>
+  `;
+  plantFactContainer.appendChild(plantFactCard);
+
+  const closeBtn = document.getElementById("close-btn");
+  closeBtn.addEventListener("click", closeFactCard);
+};
+
+const closeFactCard = () => {
+  if (plantFactCard) {
+    plantFactCard.remove()
+  }
+};
+
+const addComment = (e) => {
+  e.preventDefault();
+  console.log('comment posted')
+  // axios.post(`${baseURL}`, body)
+  // .then(plantsCallback)
+  // .catch(errCallback)
+};
+
+
 
 plantBtn.addEventListener("click", getPlantFact);
 form.addEventListener("submit", submitHandler);

@@ -1,7 +1,3 @@
-p {
-   color:  #7B886B;
-   font-size: 1em;
-}
 
 header {
    display: block;
@@ -110,4 +106,39 @@ li {
    width: 80%;
 }
 
-background: #E3D5CA url(https://i.etsystatic.com/28718911/r/il/4dea21/2997634814/il_794xN.2997634814_8v9h.jpg) center center/cover no-repeat padding-box;
+.fact-container {
+   font-family: "Quicksand";
+   font-size: 24px;
+   padding: 10px;
+   display: flex;
+   text-align:center;
+   justify-content:center;
+
+}
+
+.plant-fact-card {
+   background-color: white;
+   color: white;
+   padding: 20px;
+   width: 25%;
+   height: 100%;
+}
+
+.plant-fact-content {
+   background-color: #48392a;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.plant-fact-top {
+   display: flex;
+   flex-direction: row-reverse;
+}
+
+.close-styles {
+   background: none;
+   border: none;
+   color: white;
+}

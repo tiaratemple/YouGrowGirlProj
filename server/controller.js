@@ -1,4 +1,3 @@
-//const Rollbar = require('rollbar')
 path = require('path')
 
 
@@ -26,6 +25,15 @@ module.exports = {
 
         res.status(200).send(randomPlantFact);
     },
+
+    addComment: (req, res) => {
+        const { id, comment } = req.body
+        let plantToAddComment = plants.find((plant) => {
+            return plant.id === parseInt(id)
+        })
+        plantToAddComment.comment.push(comment)
+        res.status(200).send(plantToAddComment)
+    }
 
     
 }
