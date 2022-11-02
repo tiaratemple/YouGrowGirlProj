@@ -7,6 +7,7 @@ let plantCard;
 let plantFactCard;
 let commentInputField;
 let currentPlantId;
+
 const baseURL = `http://localhost:4000/api/plants`;
 
 const plantsCallback = ({ data: plants }) => createPlantCard(plants);
@@ -29,6 +30,7 @@ const updateLikes = (id) => {
 };
 
 const getPlantFact = () => {
+  document.getElementById('landing-page').style.display = "none";
   if (plantFactCard) {
     plantFactCard.remove()
   }
@@ -45,11 +47,12 @@ const submitHandler = (e) => {
 };
 
 const createPlantCard = (plants) => {
+  document.getElementById('landing-page').style.display = "none";
   if (plantCard) {
     plantCard.remove()
   }
   const plant = plants.find((plant) => {
-    if (inputField.value === plant.name){
+    if (plant.name.toLowerCase().includes(inputField.value.toLowerCase())){
       return plant;
     }
   });
@@ -59,7 +62,7 @@ const createPlantCard = (plants) => {
   const html = 
     '<ul>' +
       plant.comments.map((comment) => {
-        return `<li>${comment}</li>`
+        return `<li class="test">${comment}</li>`
       }).join('') + 
     '</ul>';
   plantCard = document.createElement("div");
@@ -192,8 +195,6 @@ const addComment = (e) => {
   .then(plantsCallback)
   .catch(errCallback)
 };
-
-
 
 plantBtn.addEventListener("click", getPlantFact);
 form.addEventListener("submit", submitHandler);

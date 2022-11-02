@@ -13,23 +13,33 @@
     <title>You Grow Girl</title>
 </head>
 <body>
-    <header>
-        <h1>
-            You Grow Girl
-        </h1>
-        <div class="topnav">
-            <button id="plantButton">Get a Plant Fact</button>
-            <form class="form" id="form">
-                <input type="text" name="search-bar" class="input-styles" id="input"></input>
-                <button class="submit">Search</button>
-            </form>
-        </div> 
-    </header>
-    <main>
-        <span id="plant-fact-container" class="fact-container">
-        </span>  
-        <section id="plants-container" class="plants-container">
-        </section>
+    <div class="page-container">
+        <div class="content-wrap">
+            <header>
+                <h1>
+                    You Grow Girl
+                </h1>
+                <div class="topnav">
+                    <button id="plantButton">Get a Plant Fact</button>
+                    <form class="form" id="form">
+                        <input type="text" name="search-bar" class="input-styles" id="input"></input>
+                        <button class="submit">Search</button>
+                    </form>
+                </div> 
+            </header>
+            <main>
+                <section id="landing-page" class="landing-card">
+                    <h3>Well ALOE there! Thanks for POPPYing in.</h3>
+                    <p>Feel free to grab a random plant fact or type in the name of a plant to learn basic care tips.</p>
+                </section>
+                <span id="plant-fact-container" class="fact-container">
+                </span>  
+                <section id="plants-container" class="plants-container">
+                </section>
+            </main>
+            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+            <script src="main.js"></script>
+        </div>
         <footer>
             <p class="footer-text">
                 You Grow Girl
@@ -38,8 +48,6 @@
                 &copy Tiara Temple
             </p>
         </footer>
-    </main>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="main.js"></script>
+    </div>
 </body>
 </html>
