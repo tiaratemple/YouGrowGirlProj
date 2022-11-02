@@ -57,12 +57,11 @@ const createPlantCard = (plants) => {
   currentPlantId = plant.id;
 
   const html = 
-    '<ul>' + 
+    '<ul>' +
       plant.comments.map((comment) => {
         return `<li>${comment}</li>`
       }).join('') + 
     '</ul>';
-
   plantCard = document.createElement("div");
 
   plantCard.classList.add("plant-card");
@@ -102,11 +101,11 @@ const createPlantCard = (plants) => {
               name="comment" 
               class="comment-input-styles" 
               id="comment-input"
-              placeholder="Enter a comment"
+              placeholder="Add a comment"
             >
             </input>
             <button class="comment-btn-styles">
-              Add Comment
+              Post
             </button>
           </form>
           <div>
@@ -114,28 +113,30 @@ const createPlantCard = (plants) => {
           </div>
         </div>
       </div>
-      <ul>
-        <li>
-          <i 
-            style="font-size:24px" 
-            class="fa">&#xf043;
-          </i> 
-          ${plant.careTips[0].water}</li>
-        <li>
-          <i 
-            style="font-size:24px" 
-            class="fa">&#xf185;
-          </i>
-          ${plant.careTips[1].sunlight}
-        </li>
-        <li>
-          <i 
-            style="font-size:24px" 
-            class="fa">&#xf0e4;
-          </i>
-          ${plant.careTips[2].difficulty}
-        </li>
-      </ul>
+      <div class="care-list-container">
+        <ul class="care-list">
+          <li class="care-list-items">
+            <i 
+              style="font-size:24px" 
+              class="fa">&#xf043;
+            </i> 
+            ${plant.careTips[0].water}</li>
+          <li class="care-list-items">
+            <i 
+              style="font-size:24px" 
+              class="fa">&#xf185;
+            </i>
+            ${plant.careTips[1].sunlight}
+          </li>
+          <li class="care-list-items">
+            <i 
+              style="font-size:24px" 
+              class="fa">&#xf0e4;
+            </i>
+            ${plant.careTips[2].difficulty}
+          </li>
+        </ul>
+      </div>
     </div>
   `;
   plantsContainer.appendChild(plantCard);
