@@ -8,7 +8,7 @@ let plantFactCard;
 let commentInputField;
 let currentPlantId;
 
-const baseURL = `http://localhost:4000/api/plants`;
+const baseURL = `http://localhost:4000/plants`;
 
 const plantsCallback = ({ data: plants }) => createPlantCard(plants);
 const updateLikesCallback = ({ data: plant }) => updateLikeValue(plant);
@@ -34,7 +34,7 @@ const getPlantFact = () => {
   if (plantFactCard) {
     plantFactCard.remove()
   }
-  axios.get("http://localhost:4000/api/plantFacts/").then((res) => {
+  axios.get("http://localhost:4000/plantFacts/").then((res) => {
     const data = res.data;
     createPlantFactCard(data)
   });

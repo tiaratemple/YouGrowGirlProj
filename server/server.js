@@ -13,10 +13,10 @@ const { getHTML, getCSS, getJS, getPlants, updateLikes, getPlantFact, addComment
 app.get('/' , getHTML)
 app.get('/css' , getCSS)
 app.get('/js', getJS )
-app.get('/api/plants', getPlants)
-app.put('/api/plants/:id', updateLikes)
-app.get('/api/plantFacts', getPlantFact)
-app.post('/api/plants/addComment/:id', addComment)
+app.get('/plants', getPlants)
+app.put('/plants/:id', updateLikes)
+app.get('/plantFacts', getPlantFact)
+app.post('/plants/addComment/:id', addComment)
 
 const port = process.env.PORT || 4000
 

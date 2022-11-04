@@ -5,18 +5,15 @@ const plants = require('./db.json')
 
 module.exports = {
     getHTML: (req, res) => {
-        console.log(__dirname)
         res.sendFile(path.join(__dirname, '../public/index.html'))
     },
 
     getCSS: (req, res) => {
-        console.log(__dirname)
-        res.sendFile(path.join(__dirname, '../public/css'))
+        res.sendFile(path.join(__dirname, '../public/styles.css'))
     },
 
     getJS: (req, res) => {
-        console.log(__dirname)
-        res.sendFile(path.join(__dirname, '../public/js'))
+        res.sendFile(path.join(__dirname, '../public/main.js'))
     },
 
     
