@@ -4,6 +4,22 @@ path = require('path')
 const plants = require('./db.json')
 
 module.exports = {
+    getHTML: (req, res) => {
+        console.log(__dirname)
+        res.sendFile(path.join(__dirname, '../public/index.html'))
+    },
+
+    getCSS: (req, res) => {
+        console.log(__dirname)
+        res.sendFile(path.join(__dirname, '../public/css'))
+    },
+
+    getJS: (req, res) => {
+        console.log(__dirname)
+        res.sendFile(path.join(__dirname, '../public/js'))
+    },
+
+    
     getPlants: (req, res) => {
         res.status(200).send(plants)
     },
