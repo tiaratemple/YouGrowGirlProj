@@ -18,7 +18,7 @@ const getPlants = () => {
   if (plantCard) {
     plantCard.remove()
   }
-  axios.get(`${baseURL}`)
+  axios.get(`${baseURL}/plants`)
   .then(plantsCallback)
   .catch(errCallback);
 };
@@ -191,7 +191,7 @@ const addComment = (e) => {
     id: currentPlantId,
     comment: commentInputField.value
   }
-  axios.post(`${baseURL}/addComment/:id`, body)
+  axios.post(`${baseURL}/plants/addComment/:id`, body)
   .then(plantsCallback)
   .catch(errCallback)
 };
