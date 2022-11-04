@@ -24,7 +24,7 @@ const getPlants = () => {
 };
 
 const updateLikes = (id) => {
-  axios.put(`${baseURL}/${id}`)
+  axios.put(`${baseURL}/plants/${id}`)
   .then(updateLikesCallback)
   .catch(errCallback);
 };
