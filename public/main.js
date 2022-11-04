@@ -18,7 +18,7 @@ const getPlants = () => {
   if (plantCard) {
     plantCard.remove()
   }
-  axios.get(baseURL)
+  axios.get(`${baseURL}`)
   .then(plantsCallback)
   .catch(errCallback);
 };
